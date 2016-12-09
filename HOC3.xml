@@ -6,15 +6,15 @@
       </block>
     </value>
     <next>
-      <block type="controls_repeat" id="243" inline="true">
-        <value name="TIMES">
-          <block type="math_number" id="256">
-            <field name="NUM">0</field>
-          </block>
-        </value>
-        <statement name="DO">
-          <block type="movement_forward" id="272">
-            <next>
+      <block type="movement_forward" id="272">
+        <next>
+          <block type="controls_repeat" id="243" inline="true">
+            <value name="TIMES">
+              <block type="math_number" id="256">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <statement name="DO">
               <block type="led_select" id="179" inline="true">
                 <field name="ACTION">ON</field>
                 <value name="LED">
@@ -26,9 +26,9 @@
                   <block type="movement_forward" id="199"></block>
                 </next>
               </block>
-            </next>
+            </statement>
           </block>
-        </statement>
+        </next>
       </block>
     </next>
   </block>
