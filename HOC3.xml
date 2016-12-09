@@ -13,15 +13,19 @@
           </block>
         </value>
         <statement name="DO">
-          <block type="led_select" id="179" inline="true">
-            <field name="ACTION">ON</field>
-            <value name="LED">
-              <block type="math_number" id="189">
-                <field name="NUM">4</field>
-              </block>
-            </value>
+          <block type="movement_forward" id="272">
             <next>
-              <block type="movement_forward" id="199"></block>
+              <block type="led_select" id="179" inline="true">
+                <field name="ACTION">ON</field>
+                <value name="LED">
+                  <block type="math_number" id="189">
+                    <field name="NUM">4</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="movement_forward" id="199"></block>
+                </next>
+              </block>
             </next>
           </block>
         </statement>
