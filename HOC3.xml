@@ -1,13 +1,31 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="led_select" id="179" inline="true" x="143" y="12">
-    <field name="ACTION">ON</field>
-    <value name="LED">
-      <block type="math_number" id="189">
-        <field name="NUM">4</field>
+  <block type="robot_delay" id="222" inline="true" x="144" y="-31">
+    <value name="DELAY">
+      <block type="math_number" id="229">
+        <field name="NUM">1000</field>
       </block>
     </value>
     <next>
-      <block type="movement_forward" id="199"></block>
+      <block type="controls_repeat" id="243" inline="true">
+        <value name="TIMES">
+          <block type="math_number" id="256">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="led_select" id="179" inline="true">
+            <field name="ACTION">ON</field>
+            <value name="LED">
+              <block type="math_number" id="189">
+                <field name="NUM">4</field>
+              </block>
+            </value>
+            <next>
+              <block type="movement_forward" id="199"></block>
+            </next>
+          </block>
+        </statement>
+      </block>
     </next>
   </block>
 </xml>
